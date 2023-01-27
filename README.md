@@ -33,11 +33,30 @@ on where you're sourcing your ckpt and yaml files.
 4. Install dependencies and build the image  
 
     Once the model files are in place, you should be able to build the docker image by running
-    ```sh
-    $ docker build . -t stable-diffusion
-    ```
+    <pre>$ docker build . -t <kbd>Choose a name</kbd></pre>
     All relevant dependencies should be installed during the build process, and you will not have to install anything more once it is done.
 
     <code>:warning: This step will take several minutes and requires 40-50 gigabytes of storage.</code>
 
     <code>:point_right: Images aren't automatically deleted if the build process fails, so remember to delete your old images if you need to cancel the build process, or if it errors.</code>
+
+5. Start the Stable Diffusion image
+
+   Now that you have build the image, you can start it by running
+   <pre>$ ./start.sh <kbd>The name you chose</kbd></pre>
+   or manually with
+   <pre>$ sudo docker run --network=host --device=/dev/kfd --device=/dev/dri --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined <kbd>The name you chose</kbd></pre>
+
+   <code>:point_right: Stable Diffusion needs access to your video card, so simply starting the container isn't enough &ndash; this is why there are a bunch of flags in the command.</code>
+
+6. Open the GUI in your browser
+   
+   Go to http://localhost:7860 and start generating!
+
+   For tips on how to generate good images, read through the [Tips & Tricks](./tips.md) guide.
+
+   <code>:warning: Stable diffusion sometimes doesn't give you any indication of exactly when the web server is started. Reload the page until it's all up and running, shouldn't take more than a minute or two.</code>
+
+   <code>:warning: The first generation will often take a while, subsequent generations will be considerably quicker.</code>
+
+   
