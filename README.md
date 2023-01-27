@@ -21,7 +21,7 @@ on where you're sourcing your ckpt and yaml files.
    [StabilityAI's repository on 🤗 Hugging Face](https://huggingface.co/stabilityai/stable-diffusion-2).
    Download the ckpt file from the <kbd>:page_facing_up: Files and versions</kbd> tab. Place the file in <code><kbd>Project root</kbd>/stable-diffusion-webui/models/Stable-diffusion</code>
 
-   <code>:point_right: If you already have a checkpoint file for stable diffusion or one of its derivatives, you may skip this step.</code>
+   <code>👉 If you already have a checkpoint file for stable diffusion or one of its derivatives, you may skip this step.</code>
 
 3. Download the yaml configuration file for your checkpoint.
 
@@ -36,9 +36,9 @@ on where you're sourcing your ckpt and yaml files.
     <pre>$ docker build . -t <kbd>Choose a name</kbd></pre>
     All relevant dependencies should be installed during the build process, and you will not have to install anything more once it is done.
 
-    <code>:warning: This step will take several minutes and requires 40-50 gigabytes of storage.</code>
+    <code>⚠️ This step will take several minutes and requires 40-50 gigabytes of storage.</code>
 
-    <code>:point_right: Images aren't automatically deleted if the build process fails, so remember to delete your old images if you need to cancel the build process, or if it errors.</code>
+    <code>👉 Images aren't automatically deleted if the build process fails, so remember to delete your old images if you need to cancel the build process, or if it errors.</code>
 
 5. Start the Stable Diffusion image
 
@@ -52,8 +52,8 @@ on where you're sourcing your ckpt and yaml files.
 
    For tips on how to generate good images, read through the [Tips & Tricks](./TIPS.md) guide.
 
-   <code>:warning: Stable diffusion sometimes doesn't give you any indication of exactly when the web server is started. Reload the page until it's all up and running, shouldn't take more than a minute or two.</code>
+   <code>⚠️ Stable diffusion sometimes doesn't give you any indication of exactly when the web server is started. Reload the page until it's all up and running, shouldn't take more than a minute or two.</code>
 
-   <code>:warning: The first generation will often take a while, subsequent generations will be considerably quicker.</code>
+   <code>⚠️ The first generation will often take a while, subsequent generations will be considerably quicker.</code>
 
    
