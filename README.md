@@ -44,16 +44,13 @@ on where you're sourcing your ckpt and yaml files.
 
    Now that you have build the image, you can start it by running
    <pre>$ ./start.sh <kbd>The name you chose</kbd></pre>
-   or manually with
-   <pre>$ sudo docker run --network=host --device=/dev/kfd --device=/dev/dri --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined <kbd>The name you chose</kbd></pre>
 
-   <code>:point_right: Stable Diffusion needs access to your video card, so simply starting the container isn't enough &ndash; this is why there are a bunch of flags in the command.</code>
 
 6. Open the GUI in your browser
    
    Go to http://localhost:7860 and start generating!
 
-   For tips on how to generate good images, read through the [Tips & Tricks](./tips.md) guide.
+   For tips on how to generate good images, read through the [Tips & Tricks](./TIPS.md) guide.
 
    <code>:warning: Stable diffusion sometimes doesn't give you any indication of exactly when the web server is started. Reload the page until it's all up and running, shouldn't take more than a minute or two.</code>
 
