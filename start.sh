@@ -7,5 +7,12 @@ if [ -n "$EXISTING_CONTAINER" ]; then
     docker start -i $EXISTING_CONTAINER
 else
     echo "Creating a new container"
-    docker run --network=host --device=/dev/kfd --device=/dev/dri --group-add=video --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v $(pwd)/outputs:/opt/app/outputs $1
+    docker run \
+        --network=host \
+        --device=/dev/kfd --device=/dev/dri --group-add=video \
+        --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
+        -v $(pwd)/outputs:/opt/app/outputs \
+        -v $(pwd)/models:/opt/app/models \
+        -v $(pwd)/embeddings:/opt/app/embeddings \
+        $1
 fi
