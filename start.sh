@@ -14,5 +14,6 @@ else
         -v $(pwd)/outputs:/opt/app/outputs \
         -v $(pwd)/models:/opt/app/models \
         -v $(pwd)/embeddings:/opt/app/embeddings \
+        -v $(pwd)/scripts:/opt/app/scripts \
         $1
 fi
