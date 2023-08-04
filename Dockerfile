@@ -1,5 +1,4 @@
-FROM rocm/pytorch:latest
-
+FROM rocm/pytorch:rocm5.4.2_ubuntu20.04_py3.8_pytorch_2.0.0_preview
 
 WORKDIR /opt/app
 ADD stable-diffusion-webui /opt/app/

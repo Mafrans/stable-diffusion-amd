@@ -11,6 +11,7 @@ else
         --network=host \
         --device=/dev/kfd --device=/dev/dri --group-add=video \
         --ipc=host --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
+        -p 7860:7860 \
         -v $(pwd)/outputs:/opt/app/outputs \
         -v $(pwd)/models:/opt/app/models \
         -v $(pwd)/embeddings:/opt/app/embeddings \
